@@ -1,0 +1,2129 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>访问者模式应用实例 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.html" />
+    
+    
+    <link rel="prev" href="1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    设计模式概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../面向对象设计原则/">
+            
+                <a href="../../面向对象设计原则/">
+            
+                    
+                    面向对象设计原则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../创建型模式/">
+            
+                <a href="../../创建型模式/">
+            
+                    
+                    创建型模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../创建型模式/简单工厂模式/">
+            
+                <a href="../../创建型模式/简单工厂模式/">
+            
+                    
+                    简单工厂模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../创建型模式/简单工厂模式/1.html">
+            
+                <a href="../../创建型模式/简单工厂模式/1.html">
+            
+                    
+                    简单工厂模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../创建型模式/简单工厂模式/2.html">
+            
+                <a href="../../创建型模式/简单工厂模式/2.html">
+            
+                    
+                    简单工厂模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../创建型模式/简单工厂模式/3.html">
+            
+                <a href="../../创建型模式/简单工厂模式/3.html">
+            
+                    
+                    简单工厂模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../创建型模式/工厂方法模式/">
+            
+                <a href="../../创建型模式/工厂方法模式/">
+            
+                    
+                    工厂方法模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../创建型模式/工厂方法模式/1.html">
+            
+                <a href="../../创建型模式/工厂方法模式/1.html">
+            
+                    
+                    工厂方法模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../创建型模式/工厂方法模式/2.html">
+            
+                <a href="../../创建型模式/工厂方法模式/2.html">
+            
+                    
+                    工厂方法模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../创建型模式/工厂方法模式/3.html">
+            
+                <a href="../../创建型模式/工厂方法模式/3.html">
+            
+                    
+                    工厂方法模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../创建型模式/抽象工厂模式/">
+            
+                <a href="../../创建型模式/抽象工厂模式/">
+            
+                    
+                    抽象工厂模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../创建型模式/抽象工厂模式/1.html">
+            
+                <a href="../../创建型模式/抽象工厂模式/1.html">
+            
+                    
+                    抽象工厂模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../创建型模式/抽象工厂模式/2.html">
+            
+                <a href="../../创建型模式/抽象工厂模式/2.html">
+            
+                    
+                    抽象工厂模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../创建型模式/抽象工厂模式/3.html">
+            
+                <a href="../../创建型模式/抽象工厂模式/3.html">
+            
+                    
+                    抽象工厂模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../创建型模式/建造者模式/">
+            
+                <a href="../../创建型模式/建造者模式/">
+            
+                    
+                    建造者模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../创建型模式/建造者模式/1.html">
+            
+                <a href="../../创建型模式/建造者模式/1.html">
+            
+                    
+                    建造者模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../创建型模式/建造者模式/2.html">
+            
+                <a href="../../创建型模式/建造者模式/2.html">
+            
+                    
+                    建造者模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../../创建型模式/建造者模式/3.html">
+            
+                <a href="../../创建型模式/建造者模式/3.html">
+            
+                    
+                    指挥者类的深入讨论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../../创建型模式/建造者模式/4.html">
+            
+                <a href="../../创建型模式/建造者模式/4.html">
+            
+                    
+                    建造者模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../创建型模式/原型模式/">
+            
+                <a href="../../创建型模式/原型模式/">
+            
+                    
+                    原型模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../../创建型模式/原型模式/1.html">
+            
+                <a href="../../创建型模式/原型模式/1.html">
+            
+                    
+                    原型模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../../创建型模式/原型模式/2.html">
+            
+                <a href="../../创建型模式/原型模式/2.html">
+            
+                    
+                    原型模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../../创建型模式/原型模式/3.html">
+            
+                <a href="../../创建型模式/原型模式/3.html">
+            
+                    
+                    原型管理器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../../创建型模式/原型模式/4.html">
+            
+                <a href="../../创建型模式/原型模式/4.html">
+            
+                    
+                    原型模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../创建型模式/单例模式/">
+            
+                <a href="../../创建型模式/单例模式/">
+            
+                    
+                    单例模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../../创建型模式/单例模式/1.html">
+            
+                <a href="../../创建型模式/单例模式/1.html">
+            
+                    
+                    单例模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../../创建型模式/单例模式/2.html">
+            
+                <a href="../../创建型模式/单例模式/2.html">
+            
+                    
+                    单例模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../../创建型模式/单例模式/3.html">
+            
+                <a href="../../创建型模式/单例模式/3.html">
+            
+                    
+                    饿汉式单例与懒汉式单例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="../../创建型模式/单例模式/4.html">
+            
+                <a href="../../创建型模式/单例模式/4.html">
+            
+                    
+                    单例模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../结构型模式/">
+            
+                <a href="../../结构型模式/">
+            
+                    
+                    结构型模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../结构型模式/适配器模式/">
+            
+                <a href="../../结构型模式/适配器模式/">
+            
+                    
+                    适配器模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../结构型模式/适配器模式/1.html">
+            
+                <a href="../../结构型模式/适配器模式/1.html">
+            
+                    
+                    适配器模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../结构型模式/适配器模式/2.html">
+            
+                <a href="../../结构型模式/适配器模式/2.html">
+            
+                    
+                    适配器模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../结构型模式/适配器模式/3.html">
+            
+                <a href="../../结构型模式/适配器模式/3.html">
+            
+                    
+                    其他适配器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../../结构型模式/适配器模式/4.html">
+            
+                <a href="../../结构型模式/适配器模式/4.html">
+            
+                    
+                    适配器模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../结构型模式/桥接模式/">
+            
+                <a href="../../结构型模式/桥接模式/">
+            
+                    
+                    桥接模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../结构型模式/桥接模式/1.html">
+            
+                <a href="../../结构型模式/桥接模式/1.html">
+            
+                    
+                    桥接模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../../结构型模式/桥接模式/2.html">
+            
+                <a href="../../结构型模式/桥接模式/2.html">
+            
+                    
+                    桥接模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../../结构型模式/桥接模式/3.html">
+            
+                <a href="../../结构型模式/桥接模式/3.html">
+            
+                    
+                    桥接模式与适配器模式的联用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../../结构型模式/桥接模式/4.html">
+            
+                <a href="../../结构型模式/桥接模式/4.html">
+            
+                    
+                    桥接模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../结构型模式/组合模式/">
+            
+                <a href="../../结构型模式/组合模式/">
+            
+                    
+                    组合模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../结构型模式/组合模式/1.html">
+            
+                <a href="../../结构型模式/组合模式/1.html">
+            
+                    
+                    组合模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../../结构型模式/组合模式/2.html">
+            
+                <a href="../../结构型模式/组合模式/2.html">
+            
+                    
+                    组合模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../../结构型模式/组合模式/3.html">
+            
+                <a href="../../结构型模式/组合模式/3.html">
+            
+                    
+                    透明组合模式与安全组合模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../../结构型模式/组合模式/4.html">
+            
+                <a href="../../结构型模式/组合模式/4.html">
+            
+                    
+                    组合模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../结构型模式/装饰模式/">
+            
+                <a href="../../结构型模式/装饰模式/">
+            
+                    
+                    装饰模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../结构型模式/装饰模式/1.html">
+            
+                <a href="../../结构型模式/装饰模式/1.html">
+            
+                    
+                    装饰模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../结构型模式/装饰模式/2.html">
+            
+                <a href="../../结构型模式/装饰模式/2.html">
+            
+                    
+                    装饰模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../结构型模式/装饰模式/3.html">
+            
+                <a href="../../结构型模式/装饰模式/3.html">
+            
+                    
+                    透明装饰模式与半透明装饰模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.4" data-path="../../结构型模式/装饰模式/4.html">
+            
+                <a href="../../结构型模式/装饰模式/4.html">
+            
+                    
+                    装饰模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../结构型模式/外观模式/">
+            
+                <a href="../../结构型模式/外观模式/">
+            
+                    
+                    外观模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../../结构型模式/外观模式/1.html">
+            
+                <a href="../../结构型模式/外观模式/1.html">
+            
+                    
+                    外观模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../../结构型模式/外观模式/2.html">
+            
+                <a href="../../结构型模式/外观模式/2.html">
+            
+                    
+                    外观模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../../结构型模式/外观模式/3.html">
+            
+                <a href="../../结构型模式/外观模式/3.html">
+            
+                    
+                    抽象外观类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../../结构型模式/外观模式/4.html">
+            
+                <a href="../../结构型模式/外观模式/4.html">
+            
+                    
+                    外观模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../结构型模式/享元模式/">
+            
+                <a href="../../结构型模式/享元模式/">
+            
+                    
+                    享元模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../../结构型模式/享元模式/1.html">
+            
+                <a href="../../结构型模式/享元模式/1.html">
+            
+                    
+                    享元模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../../结构型模式/享元模式/2.html">
+            
+                <a href="../../结构型模式/享元模式/2.html">
+            
+                    
+                    享元模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.3" data-path="../../结构型模式/享元模式/3.html">
+            
+                <a href="../../结构型模式/享元模式/3.html">
+            
+                    
+                    单纯享元模式与复合享元模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.4" data-path="../../结构型模式/享元模式/4.html">
+            
+                <a href="../../结构型模式/享元模式/4.html">
+            
+                    
+                    享元模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../结构型模式/代理模式/">
+            
+                <a href="../../结构型模式/代理模式/">
+            
+                    
+                    代理模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="../../结构型模式/代理模式/1.html">
+            
+                <a href="../../结构型模式/代理模式/1.html">
+            
+                    
+                    代理模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="../../结构型模式/代理模式/2.html">
+            
+                <a href="../../结构型模式/代理模式/2.html">
+            
+                    
+                    代理模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="../../结构型模式/代理模式/3.html">
+            
+                <a href="../../结构型模式/代理模式/3.html">
+            
+                    
+                    代理模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    行为型模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../职责链模式/">
+            
+                <a href="../职责链模式/">
+            
+                    
+                    职责链模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../职责链模式/1.html">
+            
+                <a href="../职责链模式/1.html">
+            
+                    
+                    职责链模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../职责链模式/2.html">
+            
+                <a href="../职责链模式/2.html">
+            
+                    
+                    职责链模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../职责链模式/3.html">
+            
+                <a href="../职责链模式/3.html">
+            
+                    
+                    职责链模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../命令模式/">
+            
+                <a href="../命令模式/">
+            
+                    
+                    命令模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../命令模式/1.html">
+            
+                <a href="../命令模式/1.html">
+            
+                    
+                    命令模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../命令模式/2.html">
+            
+                <a href="../命令模式/2.html">
+            
+                    
+                    命令模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.3" data-path="../命令模式/3.html">
+            
+                <a href="../命令模式/3.html">
+            
+                    
+                    命令模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../解释器模式/">
+            
+                <a href="../解释器模式/">
+            
+                    
+                    解释器模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" data-path="../解释器模式/1.html">
+            
+                <a href="../解释器模式/1.html">
+            
+                    
+                    文法规则和抽象语法树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" data-path="../解释器模式/2.html">
+            
+                <a href="../解释器模式/2.html">
+            
+                    
+                    解释器模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.3" data-path="../解释器模式/3.html">
+            
+                <a href="../解释器模式/3.html">
+            
+                    
+                    解释器模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.4" data-path="../解释器模式/4.html">
+            
+                <a href="../解释器模式/4.html">
+            
+                    
+                    解释器模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../迭代器模式/">
+            
+                <a href="../迭代器模式/">
+            
+                    
+                    迭代器模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.4.1" data-path="../迭代器模式/1.html">
+            
+                <a href="../迭代器模式/1.html">
+            
+                    
+                    迭代器模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.2" data-path="../迭代器模式/2.html">
+            
+                <a href="../迭代器模式/2.html">
+            
+                    
+                    迭代器模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.3" data-path="../迭代器模式/3.html">
+            
+                <a href="../迭代器模式/3.html">
+            
+                    
+                    使用内部类实现迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4.4" data-path="../迭代器模式/4.html">
+            
+                <a href="../迭代器模式/4.html">
+            
+                    
+                    迭代器模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../中介者模式/">
+            
+                <a href="../中介者模式/">
+            
+                    
+                    中介者模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1" data-path="../中介者模式/1.html">
+            
+                <a href="../中介者模式/1.html">
+            
+                    
+                    中介者模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.2" data-path="../中介者模式/2.html">
+            
+                <a href="../中介者模式/2.html">
+            
+                    
+                    中介者模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.3" data-path="../中介者模式/3.html">
+            
+                <a href="../中介者模式/3.html">
+            
+                    
+                    中介者模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../备忘录模式/">
+            
+                <a href="../备忘录模式/">
+            
+                    
+                    备忘录模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.6.1" data-path="../备忘录模式/1.html">
+            
+                <a href="../备忘录模式/1.html">
+            
+                    
+                    备忘录模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.2" data-path="../备忘录模式/2.html">
+            
+                <a href="../备忘录模式/2.html">
+            
+                    
+                    备忘录模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6.3" data-path="../备忘录模式/3.html">
+            
+                <a href="../备忘录模式/3.html">
+            
+                    
+                    备忘录模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../观察者模式/">
+            
+                <a href="../观察者模式/">
+            
+                    
+                    观察者模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.7.1" data-path="../观察者模式/1.html">
+            
+                <a href="../观察者模式/1.html">
+            
+                    
+                    观察者模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7.2" data-path="../观察者模式/2.html">
+            
+                <a href="../观察者模式/2.html">
+            
+                    
+                    观察者模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7.3" data-path="../观察者模式/3.html">
+            
+                <a href="../观察者模式/3.html">
+            
+                    
+                    观察者模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../状态模式/">
+            
+                <a href="../状态模式/">
+            
+                    
+                    状态模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.8.1" data-path="../状态模式/1.html">
+            
+                <a href="../状态模式/1.html">
+            
+                    
+                    状态模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.2" data-path="../状态模式/2.html">
+            
+                <a href="../状态模式/2.html">
+            
+                    
+                    状态模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.3" data-path="../状态模式/3.html">
+            
+                <a href="../状态模式/3.html">
+            
+                    
+                    共享状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.4" data-path="../状态模式/4.html">
+            
+                <a href="../状态模式/4.html">
+            
+                    
+                    使用环境类实现状态转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8.5" data-path="../状态模式/5.html">
+            
+                <a href="../状态模式/5.html">
+            
+                    
+                    状态模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../策略模式/">
+            
+                <a href="../策略模式/">
+            
+                    
+                    策略模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.9.1" data-path="../策略模式/1.html">
+            
+                <a href="../策略模式/1.html">
+            
+                    
+                    策略模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.2" data-path="../策略模式/2.html">
+            
+                <a href="../策略模式/2.html">
+            
+                    
+                    策略模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9.3" data-path="../策略模式/3.html">
+            
+                <a href="../策略模式/3.html">
+            
+                    
+                    策略模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../模板方法模式/">
+            
+                <a href="../模板方法模式/">
+            
+                    
+                    模板方法模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.10.1" data-path="../模板方法模式/1.html">
+            
+                <a href="../模板方法模式/1.html">
+            
+                    
+                    模板方法模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10.2" data-path="../模板方法模式/2.html">
+            
+                <a href="../模板方法模式/2.html">
+            
+                    
+                    模板方法模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10.3" data-path="../模板方法模式/3.html">
+            
+                <a href="../模板方法模式/3.html">
+            
+                    
+                    模板方法模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    访问者模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.11.1" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    访问者模式结构与实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.11.2" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    访问者模式应用实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11.3" data-path="3.html">
+            
+                <a href="3.html">
+            
+                    
+                    访问者模式与组合模式联用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11.4" data-path="4.html">
+            
+                <a href="4.html">
+            
+                    
+                    访问者模式优/缺点与适用环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >访问者模式应用实例</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;">&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</h1>
+<h2 id="&#x5B9E;&#x4F8B;&#x8BF4;&#x660E;">&#x5B9E;&#x4F8B;&#x8BF4;&#x660E;</h2>
+<blockquote>
+<p>&#x67D0;&#x8F6F;&#x4EF6;&#x516C;&#x53F8;OA&#x7CFB;&#x7EDF;&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#x7BA1;&#x7406;&#x5B50;&#x7CFB;&#x7EDF;&#xFF0C;&#x8BE5;&#x516C;&#x53F8;&#x5458;&#x5DE5;&#x5305;&#x62EC;&#x6B63;&#x5F0F;&#x5458;&#x5DE5;&#x548C;&#x4E34;&#x65F6;&#x5DE5;&#xFF0C;&#x6BCF;&#x5468;&#x4EBA;&#x529B;&#x8D44;&#x6E90;&#x90E8;&#x548C;&#x8D22;&#x52A1;&#x90E8;&#x7B49;&#x90E8;&#x95E8;&#x9700;&#x8981;&#x5BF9;&#x5458;&#x5DE5;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6C47;&#x603B;&#xFF0C;&#x6C47;&#x603B;&#x6570;&#x636E;&#x5305;&#x62EC;&#x5458;&#x5DE5;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#x3001;&#x5458;&#x5DE5;&#x5DE5;&#x8D44;&#x7B49;&#x3002;&#x8BE5;&#x516C;&#x53F8;&#x57FA;&#x672C;&#x5236;&#x5EA6;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>(1) &#x6B63;&#x5F0F;&#x5458;&#x5DE5;&#x6BCF;&#x5468;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#x4E3A;40&#x5C0F;&#x65F6;&#xFF0C;&#x4E0D;&#x540C;&#x7EA7;&#x522B;&#x3001;&#x4E0D;&#x540C;&#x90E8;&#x95E8;&#x7684;&#x5458;&#x5DE5;&#x6BCF;&#x5468;&#x57FA;&#x672C;&#x5DE5;&#x8D44;&#x4E0D;&#x540C;&#xFF1B;&#x5982;&#x679C;&#x8D85;&#x8FC7;40&#x5C0F;&#x65F6;&#xFF0C;&#x8D85;&#x51FA;&#x90E8;&#x5206;&#x6309;&#x7167;100&#x5143;/&#x5C0F;&#x65F6;&#x4F5C;&#x4E3A;&#x52A0;&#x73ED;&#x8D39;&#xFF1B;&#x5982;&#x679C;&#x5C11;&#x4E8E;40&#x5C0F;&#x65F6;&#xFF0C;&#x6240;&#x7F3A;&#x65F6;&#x95F4;&#x6309;&#x7167;&#x8BF7;&#x5047;&#x5904;&#x7406;&#xFF0C;&#x8BF7;&#x5047;&#x6240;&#x6263;&#x5DE5;&#x8D44;&#x4EE5;80&#x5143;/&#x5C0F;&#x65F6;&#x8BA1;&#x7B97;&#xFF0C;&#x76F4;&#x5230;&#x57FA;&#x672C;&#x5DE5;&#x8D44;&#x6263;&#x9664;&#x5230;&#x96F6;&#x4E3A;&#x6B62;&#x3002;&#x9664;&#x4E86;&#x8BB0;&#x5F55;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#x5916;&#xFF0C;&#x4EBA;&#x529B;&#x8D44;&#x6E90;&#x90E8;&#x9700;&#x8BB0;&#x5F55;&#x52A0;&#x73ED;&#x65F6;&#x957F;&#x6216;&#x8BF7;&#x5047;&#x65F6;&#x957F;&#xFF0C;&#x4F5C;&#x4E3A;&#x5458;&#x5DE5;&#x5E73;&#x65F6;&#x8868;&#x73B0;&#x7684;&#x4E00;&#x9879;&#x4F9D;&#x636E;&#x3002;</p>
+<p>(2) &#x4E34;&#x65F6;&#x5DE5;&#x6BCF;&#x5468;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#x4E0D;&#x56FA;&#x5B9A;&#xFF0C;&#x57FA;&#x672C;&#x5DE5;&#x8D44;&#x6309;&#x5C0F;&#x65F6;&#x8BA1;&#x7B97;&#xFF0C;&#x4E0D;&#x540C;&#x5C97;&#x4F4D;&#x7684;&#x4E34;&#x65F6;&#x5DE5;&#x5C0F;&#x65F6;&#x5DE5;&#x8D44;&#x4E0D;&#x540C;&#x3002;&#x4EBA;&#x529B;&#x8D44;&#x6E90;&#x90E8;&#x53EA;&#x9700;&#x8BB0;&#x5F55;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x4EBA;&#x529B;&#x8D44;&#x6E90;&#x90E8;&#x548C;&#x8D22;&#x52A1;&#x90E8;&#x5DE5;&#x4F5C;&#x4EBA;&#x5458;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5404;&#x81EA;&#x7684;&#x9700;&#x8981;&#x5BF9;&#x5458;&#x5DE5;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6C47;&#x603B;&#x5904;&#x7406;&#xFF0C;&#x4EBA;&#x529B;&#x8D44;&#x6E90;&#x90E8;&#x8D1F;&#x8D23;&#x6C47;&#x603B;&#x6BCF;&#x5468;&#x5458;&#x5DE5;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#xFF0C;&#x800C;&#x8D22;&#x52A1;&#x90E8;&#x8D1F;&#x8D23;&#x8BA1;&#x7B97;&#x6BCF;&#x5468;&#x5458;&#x5DE5;&#x5DE5;&#x8D44;&#x3002;
+&#x73B0;&#x4F7F;&#x7528;&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;&#x8BBE;&#x8BA1;&#x8BE5;&#x7CFB;&#x7EDF;&#xFF0C;&#x7ED8;&#x5236;&#x7C7B;&#x56FE;&#x5E76;&#x4F7F;&#x7528;Java&#x8BED;&#x8A00;&#x7F16;&#x7801;&#x5B9E;&#x73B0;&#x3002;</p>
+</blockquote>
+<h2 id="&#x5B9E;&#x4F8B;&#x7C7B;&#x56FE;">&#x5B9E;&#x4F8B;&#x7C7B;&#x56FE;</h2>
+<p><img src="../../&#x56FE;&#x7247;/&#x5458;&#x5DE5;&#x6570;&#x636E;&#x6C47;&#x603B;&#x6A21;&#x5757;&#x7ED3;&#x6784;&#x56FE;.jpg" alt="&#x5458;&#x5DE5;&#x6570;&#x636E;&#x6C47;&#x603B;&#x6A21;&#x5757;&#x7ED3;&#x6784;&#x56FE;"></p>
+<h2 id="&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;">&#x5B9E;&#x4F8B;&#x4EE3;&#x7801;</h2>
+<pre><code>//&#x5458;&#x5DE5;&#x7C7B;&#xFF1A;&#x62BD;&#x8C61;&#x5143;&#x7D20;&#x7C7B;  
+public interface Employee  
+{  
+    public void accept(Department handler); //&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x8BBF;&#x95EE;&#x8005;&#x8BBF;&#x95EE;  
+}  
+
+//&#x5168;&#x804C;&#x5458;&#x5DE5;&#x7C7B;&#xFF1A;&#x5177;&#x4F53;&#x5143;&#x7D20;&#x7C7B;  
+public class FulltimeEmployee implements Employee  
+{  
+    private String name;  
+    private double weeklyWage;  
+    private int workTime;  
+
+    public FulltimeEmployee(String name,double weeklyWage,int workTime)  
+    {  
+        this.name = name;  
+        this.weeklyWage = weeklyWage;  
+        this.workTime = workTime;  
+    }     
+
+    public void setName(String name)   
+    {  
+        this.name = name;   
+    }  
+
+    public void setWeeklyWage(double weeklyWage)   
+    {  
+        this.weeklyWage = weeklyWage;   
+    }  
+
+    public void setWorkTime(int workTime)   
+    {  
+        this.workTime = workTime;   
+    }  
+
+    public String getName()   
+    {  
+        return (this.name);   
+    }  
+
+    public double getWeeklyWage()   
+    {  
+        return (this.weeklyWage);   
+    }  
+
+    public int getWorkTime()   
+    {  
+        return (this.workTime);   
+    }  
+
+    public void accept(Department handler)  
+    {  
+        handler.visit(this); //&#x8C03;&#x7528;&#x8BBF;&#x95EE;&#x8005;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x6CD5;  
+    }  
+}  
+
+//&#x517C;&#x804C;&#x5458;&#x5DE5;&#x7C7B;&#xFF1A;&#x5177;&#x4F53;&#x5143;&#x7D20;&#x7C7B;  
+public class ParttimeEmployee implements Employee  
+{  
+    private String name;  
+    private double hourWage;  
+    private int workTime;  
+
+    public ParttimeEmployee(String name,double hourWage,int workTime)  
+    {  
+        this.name = name;  
+        this.hourWage = hourWage;  
+        this.workTime = workTime;  
+    }     
+
+    public void setName(String name)   
+    {  
+        this.name = name;   
+    }  
+
+    public void setHourWage(double hourWage)   
+    {  
+        this.hourWage = hourWage;   
+    }  
+
+    public void setWorkTime(int workTime)   
+    {  
+        this.workTime = workTime;   
+    }  
+
+    public String getName()   
+    {  
+        return (this.name);   
+    }  
+
+    public double getHourWage()   
+    {  
+        return (this.hourWage);   
+    }  
+
+    public int getWorkTime()   
+    {  
+        return (this.workTime);   
+    }  
+
+    public void accept(Department handler)  
+    {  
+        handler.visit(this); //&#x8C03;&#x7528;&#x8BBF;&#x95EE;&#x8005;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x6CD5;  
+    }  
+}  
+
+//&#x90E8;&#x95E8;&#x7C7B;&#xFF1A;&#x62BD;&#x8C61;&#x8BBF;&#x95EE;&#x8005;&#x7C7B;  
+public abstract class Department  
+{  
+    //&#x58F0;&#x660E;&#x4E00;&#x7EC4;&#x91CD;&#x8F7D;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x6CD5;&#xFF0C;&#x7528;&#x4E8E;&#x8BBF;&#x95EE;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x5177;&#x4F53;&#x5143;&#x7D20;  
+    public abstract void visit(FulltimeEmployee employee);  
+    public abstract void visit(ParttimeEmployee employee);    
+}  
+
+//&#x8D22;&#x52A1;&#x90E8;&#x7C7B;&#xFF1A;&#x5177;&#x4F53;&#x8BBF;&#x95EE;&#x8005;&#x7C7B;  
+public class FADepartment extends Department  
+{  
+    //&#x5B9E;&#x73B0;&#x8D22;&#x52A1;&#x90E8;&#x5BF9;&#x5168;&#x804C;&#x5458;&#x5DE5;&#x7684;&#x8BBF;&#x95EE;  
+    public void visit(FulltimeEmployee employee)  
+    {  
+        int workTime = employee.getWorkTime();  
+        double weekWage = employee.getWeeklyWage();  
+        if(workTime &gt; 40)  
+        {  
+            weekWage = weekWage + (workTime - 40) * 100;  
+        }  
+        else if(workTime &lt; 40)  
+        {  
+            weekWage = weekWage - (40 - workTime) * 80;  
+            if(weekWage &lt; 0)  
+            {  
+                weekWage = 0;  
+            }  
+        }  
+        System.out.println(&quot;&#x6B63;&#x5F0F;&#x5458;&#x5DE5;&quot; + employee.getName() + &quot;&#x5B9E;&#x9645;&#x5DE5;&#x8D44;&#x4E3A;&#xFF1A;&quot; + weekWage + &quot;&#x5143;&#x3002;&quot;);             
+    }  
+
+    //&#x5B9E;&#x73B0;&#x8D22;&#x52A1;&#x90E8;&#x5BF9;&#x517C;&#x804C;&#x5458;&#x5DE5;&#x7684;&#x8BBF;&#x95EE;  
+    public void visit(ParttimeEmployee employee)  
+    {  
+        int workTime = employee.getWorkTime();  
+        double hourWage = employee.getHourWage();  
+        System.out.println(&quot;&#x4E34;&#x65F6;&#x5DE5;&quot; + employee.getName() + &quot;&#x5B9E;&#x9645;&#x5DE5;&#x8D44;&#x4E3A;&#xFF1A;&quot; + workTime * hourWage + &quot;&#x5143;&#x3002;&quot;);       
+    }         
+}  
+
+//&#x4EBA;&#x529B;&#x8D44;&#x6E90;&#x90E8;&#x7C7B;&#xFF1A;&#x5177;&#x4F53;&#x8BBF;&#x95EE;&#x8005;&#x7C7B;  
+public class HRDepartment extends Department  
+{  
+    //&#x5B9E;&#x73B0;&#x4EBA;&#x529B;&#x8D44;&#x6E90;&#x90E8;&#x5BF9;&#x5168;&#x804C;&#x5458;&#x5DE5;&#x7684;&#x8BBF;&#x95EE;  
+    public void visit(FulltimeEmployee employee)  
+    {  
+        int workTime = employee.getWorkTime();  
+        System.out.println(&quot;&#x6B63;&#x5F0F;&#x5458;&#x5DE5;&quot; + employee.getName() + &quot;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#x4E3A;&#xFF1A;&quot; + workTime + &quot;&#x5C0F;&#x65F6;&#x3002;&quot;);  
+        if(workTime &gt; 40)  
+        {  
+            System.out.println(&quot;&#x6B63;&#x5F0F;&#x5458;&#x5DE5;&quot; + employee.getName() + &quot;&#x52A0;&#x73ED;&#x65F6;&#x95F4;&#x4E3A;&#xFF1A;&quot; + (workTime - 40) + &quot;&#x5C0F;&#x65F6;&#x3002;&quot;);  
+        }  
+        else if(workTime &lt; 40)  
+        {  
+            System.out.println(&quot;&#x6B63;&#x5F0F;&#x5458;&#x5DE5;&quot; + employee.getName() + &quot;&#x8BF7;&#x5047;&#x65F6;&#x95F4;&#x4E3A;&#xFF1A;&quot; + (40 - workTime) + &quot;&#x5C0F;&#x65F6;&#x3002;&quot;);  
+        }                         
+    }  
+
+    //&#x5B9E;&#x73B0;&#x4EBA;&#x529B;&#x8D44;&#x6E90;&#x90E8;&#x5BF9;&#x517C;&#x804C;&#x5458;&#x5DE5;&#x7684;&#x8BBF;&#x95EE;  
+    public void visit(ParttimeEmployee employee)  
+    {  
+        int workTime = employee.getWorkTime();  
+        System.out.println(&quot;&#x4E34;&#x65F6;&#x5DE5;&quot; + employee.getName() + &quot;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x65F6;&#x95F4;&#x4E3A;&#xFF1A;&quot; + workTime + &quot;&#x5C0F;&#x65F6;&#x3002;&quot;);  
+    }         
+}  
+
+//&#x5458;&#x5DE5;&#x5217;&#x8868;&#x7C7B;&#xFF1A;&#x5BF9;&#x8C61;&#x7ED3;&#x6784;  
+public class EmployeeList  
+{  
+    //&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x5458;&#x5DE5;&#x5BF9;&#x8C61;  
+    private ArrayList&lt;Employee&gt; list = new ArrayList&lt;Employee&gt;();  
+
+    public void addEmployee(Employee employee)  
+    {  
+        list.add(employee);  
+    }  
+
+    //&#x904D;&#x5386;&#x8BBF;&#x95EE;&#x5458;&#x5DE5;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5458;&#x5DE5;&#x5BF9;&#x8C61;  
+    public void accept(Department handler)  
+    {  
+        for(Object obj : list)  
+        {  
+            ((Employee)obj).accept(handler);  
+        }  
+    }  
+}
+
+//&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+&lt;?xml version=&quot;1.0&quot;?&gt;  
+&lt;config&gt;  
+    &lt;className&gt;FADepartment&lt;/className&gt;  
+&lt;/config&gt;
+</code></pre><p>&#x7F16;&#x5199;&#x5982;&#x4E0B;&#x5BA2;&#x6237;&#x7AEF;&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code>public class Client  
+{  
+    public static void main(String args[])  
+    {  
+        EmployeeList list = new EmployeeList();  
+        Employee fte1,fte2,fte3,pte1,pte2;  
+
+        fte1 = new FulltimeEmployee(&quot;&#x5F20;&#x65E0;&#x5FCC;&quot;,3200.00,45);  
+        fte2 = new FulltimeEmployee(&quot;&#x6768;&#x8FC7;&quot;,2000.00,40);  
+        fte3 = new FulltimeEmployee(&quot;&#x6BB5;&#x8A89;&quot;,2400.00,38);  
+        pte1 = new ParttimeEmployee(&quot;&#x6D2A;&#x4E03;&#x516C;&quot;,80.00,20);  
+        pte2 = new ParttimeEmployee(&quot;&#x90ED;&#x9756;&quot;,60.00,18);  
+
+        list.addEmployee(fte1);  
+        list.addEmployee(fte2);  
+        list.addEmployee(fte3);  
+        list.addEmployee(pte1);  
+        list.addEmployee(pte2);  
+
+        Department dep;  
+        dep = (Department)XMLUtil.getBean();  
+        list.accept(dep);  
+    }  
+}
+</code></pre><p>&#x7F16;&#x8BD1;&#x5E76;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#xFF0C;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>&#x6B63;&#x5F0F;&#x5458;&#x5DE5;&#x5F20;&#x65E0;&#x5FCC;&#x5B9E;&#x9645;&#x5DE5;&#x8D44;&#x4E3A;&#xFF1A;3700.0&#x5143;&#x3002;
+&#x6B63;&#x5F0F;&#x5458;&#x5DE5;&#x6768;&#x8FC7;&#x5B9E;&#x9645;&#x5DE5;&#x8D44;&#x4E3A;&#xFF1A;2000.0&#x5143;&#x3002;
+&#x6B63;&#x5F0F;&#x5458;&#x5DE5;&#x6BB5;&#x8A89;&#x5B9E;&#x9645;&#x5DE5;&#x8D44;&#x4E3A;&#xFF1A;2240.0&#x5143;&#x3002;
+&#x4E34;&#x65F6;&#x5DE5;&#x6D2A;&#x4E03;&#x516C;&#x5B9E;&#x9645;&#x5DE5;&#x8D44;&#x4E3A;&#xFF1A;1600.0&#x5143;&#x3002;
+&#x4E34;&#x65F6;&#x5DE5;&#x90ED;&#x9756;&#x5B9E;&#x9645;&#x5DE5;&#x8D44;&#x4E3A;&#xFF1A;1080.0&#x5143;&#x3002;
+</code></pre><p>&#x5982;&#x679C;&#x8981;&#x5728;&#x7CFB;&#x7EDF;&#x4E2D;&#x589E;&#x52A0;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x8BBF;&#x95EE;&#x8005;&#xFF0C;&#x65E0;&#x987B;&#x4FEE;&#x6539;&#x6E90;&#x4EE3;&#x7801;&#xFF0C;&#x53EA;&#x8981;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5177;&#x4F53;&#x8BBF;&#x95EE;&#x8005;&#x7C7B;&#x5373;&#x53EF;&#xFF0C;&#x5728;&#x8BE5;&#x5177;&#x4F53;&#x8BBF;&#x95EE;&#x8005;&#x4E2D;&#x5C01;&#x88C5;&#x4E86;&#x65B0;&#x7684;&#x64CD;&#x4F5C;&#x5143;&#x7D20;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x4ECE;&#x589E;&#x52A0;&#x65B0;&#x7684;&#x8BBF;&#x95EE;&#x8005;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x770B;&#xFF0C;&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;&#x7B26;&#x5408;<strong>&#x5F00;&#x95ED;&#x539F;&#x5219;</strong>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8981;&#x5728;&#x7CFB;&#x7EDF;&#x4E2D;&#x589E;&#x52A0;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x5177;&#x4F53;&#x5143;&#x7D20;&#xFF0C;&#x4F8B;&#x5982;&#x589E;&#x52A0;&#x4E00;&#x79CD;&#x65B0;&#x7684;&#x5458;&#x5DE5;&#x7C7B;&#x578B;&#x4E3A;&#x201C;&#x9000;&#x4F11;&#x4EBA;&#x5458;&#x201D;&#xFF0C;&#x7531;&#x4E8E;&#x539F;&#x6709;&#x7CFB;&#x7EDF;&#x5E76;&#x672A;&#x63D0;&#x4F9B;&#x76F8;&#x5E94;&#x7684;&#x8BBF;&#x95EE;&#x63A5;&#x53E3;&#xFF08;&#x5728;&#x62BD;&#x8C61;&#x8BBF;&#x95EE;&#x8005;&#x4E2D;&#x6CA1;&#x6709;&#x58F0;&#x660E;&#x4EFB;&#x4F55;&#x8BBF;&#x95EE;&#x201C;&#x9000;&#x4F11;&#x4EBA;&#x5458;&#x201D;&#x7684;&#x65B9;&#x6CD5;&#xFF09;&#xFF0C;&#x56E0;&#x6B64;&#x5FC5;&#x987B;&#x5BF9;&#x539F;&#x6709;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x5728;&#x539F;&#x6709;&#x7684;&#x62BD;&#x8C61;&#x8BBF;&#x95EE;&#x8005;&#x7C7B;&#x548C;&#x5177;&#x4F53;&#x8BBF;&#x95EE;&#x8005;&#x7C7B;&#x4E2D;&#x589E;&#x52A0;&#x76F8;&#x5E94;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x6CD5;&#x3002;&#x4ECE;&#x589E;&#x52A0;&#x65B0;&#x7684;&#x5143;&#x7D20;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x770B;&#xFF0C;&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;&#x8FDD;&#x80CC;&#x4E86;&#x5F00;&#x95ED;&#x539F;&#x5219;&#x3002;</p>
+<p>&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x8BBF;&#x95EE;&#x8005;&#x6A21;&#x5F0F;&#x4E0E;&#x62BD;&#x8C61;&#x5DE5;&#x5382;&#x6A21;&#x5F0F;&#x7C7B;&#x4F3C;&#xFF0C;&#x5BF9;&#x5F00;&#x95ED;&#x539F;&#x5219;&#x7684;&#x652F;&#x6301;&#x5177;&#x6709;&#x503E;&#x659C;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x8BBF;&#x95EE;&#x8005;&#xFF0C;&#x4F46;&#x662F;&#x6DFB;&#x52A0;&#x65B0;&#x7684;&#x5143;&#x7D20;&#x8F83;&#x4E3A;&#x9EBB;&#x70E6;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.html" class="navigation navigation-prev " aria-label="Previous page: 访问者模式结构与实现">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.html" class="navigation navigation-next " aria-label="Next page: 访问者模式与组合模式联用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"访问者模式应用实例","level":"1.5.11.2","depth":3,"next":{"title":"访问者模式与组合模式联用","level":"1.5.11.3","depth":3,"path":"行为型模式/访问者模式/3.md","ref":"行为型模式/访问者模式/3.md","articles":[]},"previous":{"title":"访问者模式结构与实现","level":"1.5.11.1","depth":3,"path":"行为型模式/访问者模式/1.md","ref":"行为型模式/访问者模式/1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","livereload"],"pluginsConfig":{"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"行为型模式/访问者模式/2.md","mtime":"2020-01-11T08:30:15.276Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-11T08:32:27.336Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

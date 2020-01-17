@@ -1,0 +1,954 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>散列 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../二叉树和其他树/树.html" />
+    
+    
+    <link rel="prev" href="跳表.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../预备知识/程序性能.html">
+            
+                <a href="../../预备知识/程序性能.html">
+            
+                    
+                    预备知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../预备知识/程序性能.html">
+            
+                <a href="../../预备知识/程序性能.html">
+            
+                    
+                    程序性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../预备知识/渐进记法.html">
+            
+                <a href="../../预备知识/渐进记法.html">
+            
+                    
+                    渐进记法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    数据结构
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../线性表/线性表数组描述.html">
+            
+                <a href="../线性表/线性表数组描述.html">
+            
+                    
+                    线性表
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../线性表/线性表数组描述.html">
+            
+                <a href="../线性表/线性表数组描述.html">
+            
+                    
+                    线性表数组描述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../线性表/线性表链式描述.html">
+            
+                <a href="../线性表/线性表链式描述.html">
+            
+                    
+                    线性表链式描述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../数组和矩阵/数组.html">
+            
+                <a href="../数组和矩阵/数组.html">
+            
+                    
+                    数组和矩阵
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../数组和矩阵/数组.html">
+            
+                <a href="../数组和矩阵/数组.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../数组和矩阵/矩阵.html">
+            
+                <a href="../数组和矩阵/矩阵.html">
+            
+                    
+                    矩阵
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../栈/栈.html">
+            
+                <a href="../栈/栈.html">
+            
+                    
+                    栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../队列/队列.html">
+            
+                <a href="../队列/队列.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="字典.html">
+            
+                <a href="字典.html">
+            
+                    
+                    跳表和散列
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="字典.html">
+            
+                <a href="字典.html">
+            
+                    
+                    字典
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="跳表.html">
+            
+                <a href="跳表.html">
+            
+                    
+                    跳表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5.3" data-path="散列.html">
+            
+                <a href="散列.html">
+            
+                    
+                    散列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../二叉树和其他树/树.html">
+            
+                <a href="../二叉树和其他树/树.html">
+            
+                    
+                    二叉树和其他树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../二叉树和其他树/树.html">
+            
+                <a href="../二叉树和其他树/树.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../二叉树和其他树/二叉树.html">
+            
+                <a href="../二叉树和其他树/二叉树.html">
+            
+                    
+                    二叉树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../优先级队列/优先级队列.html">
+            
+                <a href="../优先级队列/优先级队列.html">
+            
+                    
+                    优先级队列
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.7.1" data-path="../优先级队列/堆.html">
+            
+                <a href="../优先级队列/堆.html">
+            
+                    
+                    堆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="../优先级队列/左高树.html">
+            
+                <a href="../优先级队列/左高树.html">
+            
+                    
+                    左高树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../竞赛树/赢者树.html">
+            
+                <a href="../竞赛树/赢者树.html">
+            
+                    
+                    竞赛树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../竞赛树/赢者树.html">
+            
+                <a href="../竞赛树/赢者树.html">
+            
+                    
+                    赢者树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../竞赛树/赢者树的实现.html">
+            
+                <a href="../竞赛树/赢者树的实现.html">
+            
+                    
+                    赢者树的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.3" data-path="../竞赛树/输者树.html">
+            
+                <a href="../竞赛树/输者树.html">
+            
+                    
+                    输者树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../搜索树/搜索树.html">
+            
+                <a href="../搜索树/搜索树.html">
+            
+                    
+                    搜索树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.9.1" data-path="../搜索树/搜索树.html">
+            
+                <a href="../搜索树/搜索树.html">
+            
+                    
+                    搜索树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.2" data-path="../搜索树/二叉搜索树的操作和实现.html">
+            
+                <a href="../搜索树/二叉搜索树的操作和实现.html">
+            
+                    
+                    二叉搜索树的操作和实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../平衡搜索树/AVL树.html">
+            
+                <a href="../平衡搜索树/AVL树.html">
+            
+                    
+                    平衡搜索树
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.10.1" data-path="../平衡搜索树/AVL树.html">
+            
+                <a href="../平衡搜索树/AVL树.html">
+            
+                    
+                    AVL树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.2" data-path="../平衡搜索树/红-黑树.html">
+            
+                <a href="../平衡搜索树/红-黑树.html">
+            
+                    
+                    红-黑树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.3" data-path="../平衡搜索树/B-树.html">
+            
+                <a href="../平衡搜索树/B-树.html">
+            
+                    
+                    B-树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../图/图.html">
+            
+                <a href="../图/图.html">
+            
+                    
+                    图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.11.1" data-path="../图/图的遍历.html">
+            
+                <a href="../图/图的遍历.html">
+            
+                    
+                    图的遍历
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.2" data-path="../图/图的描述.html">
+            
+                <a href="../图/图的描述.html">
+            
+                    
+                    图的描述
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../算法/">
+            
+                <a href="../../算法/">
+            
+                    
+                    算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../算法/贪婪算法/贪婪算法.html">
+            
+                <a href="../../算法/贪婪算法/贪婪算法.html">
+            
+                    
+                    贪婪算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../算法/贪婪算法/货箱装载.html">
+            
+                <a href="../../算法/贪婪算法/货箱装载.html">
+            
+                    
+                    货箱装载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../算法/贪婪算法/01背包问题.html">
+            
+                <a href="../../算法/贪婪算法/01背包问题.html">
+            
+                    
+                    0/1 背包问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../算法/贪婪算法/最小生成树.html">
+            
+                <a href="../../算法/贪婪算法/最小生成树.html">
+            
+                    
+                    最小生成树
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../算法/分而治之/分而治之.html">
+            
+                <a href="../../算法/分而治之/分而治之.html">
+            
+                    
+                    分而治之
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../算法/分而治之/残缺棋盘.html">
+            
+                <a href="../../算法/分而治之/残缺棋盘.html">
+            
+                    
+                    残缺棋盘
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../算法/动态规划/动态规划.html">
+            
+                <a href="../../算法/动态规划/动态规划.html">
+            
+                    
+                    动态规划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../算法/回溯法/回溯法.html">
+            
+                <a href="../../算法/回溯法/回溯法.html">
+            
+                    
+                    回溯法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../算法/分支定界/分支定界.html">
+            
+                <a href="../../算法/分支定界/分支定界.html">
+            
+                    
+                    分支定界
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >散列</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6563;&#x5217;">&#x6563;&#x5217;</h1>
+<p>&#x6563;&#x5217;&#x8868;&#xFF08;&#x54C8;&#x5E0C;&#x8868;&#xFF09;&#xFF0C;&#x662F;&#x6839;&#x636E;&#x5173;&#x952E;&#x7801;&#x503C;(Key value)&#x800C;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;&#x5B83;&#x901A;&#x8FC7;&#x628A;&#x5173;&#x952E;&#x7801;&#x503C;&#x6620;&#x5C04;&#x5230;&#x8868;&#x4E2D;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x6765;&#x8BBF;&#x95EE;&#x8BB0;&#x5F55;&#xFF0C;&#x4EE5;&#x52A0;&#x5FEB;&#x67E5;&#x627E;&#x7684;&#x901F;&#x5EA6;&#x3002;&#x8FD9;&#x4E2A;&#x6620;&#x5C04;&#x51FD;&#x6570;&#x53EB;&#x505A; <strong>&#x6563;&#x5217;&#x51FD;&#x6570;</strong>&#xFF0C;&#x5B58;&#x653E;&#x8BB0;&#x5F55;&#x7684;&#x6570;&#x7EC4;&#x53EB;&#x505A; <strong>&#x6563;&#x5217;&#x8868;</strong>&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x6570;&#x5BF9; p &#x7684;&#x5173;&#x952E;&#x5B57;&#x662F; k&#xFF0C;&#x6563;&#x5217;&#x51FD;&#x6570;&#x4E3A; f&#xFF0C;&#x90A3;&#x4E48;&#x7406;&#x60F3;&#x60C5;&#x51B5;&#x4E0B;&#xFF1A;p &#x5728;&#x6563;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#x4E3A; f(k)&#x3002;</p>
+<h2 id="&#x6563;&#x5217;&#x51FD;&#x6570;&#x548C;&#x6563;&#x5217;&#x8868;">&#x6563;&#x5217;&#x51FD;&#x6570;&#x548C;&#x6563;&#x5217;&#x8868;</h2>
+<p><strong>&#x6876;&#x548C;&#x8D77;&#x59CB;&#x6876;</strong></p>
+<p>&#x6563;&#x5217;&#x8868;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x53EB;&#x4E00;&#x4E2A;<strong>&#x6876;</strong>&#xFF1B;&#x5BF9;&#x5173;&#x952E;&#x5B57;&#x4E3A; k &#x7684;&#x6570;&#x5BF9;&#xFF0C;f(k)&#x662F;&#x8D77;&#x59CB;&#x6876;&#xFF1B;&#x6876;&#x7684;&#x6570;&#x91CF;&#x7B49;&#x4E8E;&#x6563;&#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;&#x6216;&#x5927;&#x5C0F;&#x3002;</p>
+<p><strong>&#x9664;&#x6CD5;&#x6563;&#x5217;&#x51FD;&#x6570;</strong></p>
+<p>&#x5728;&#x591A;&#x79CD;&#x6563;&#x5217;&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x6700;&#x5E38;&#x7528;&#x7684;&#x662F;&#x9664;&#x6CD5;&#x6563;&#x5217;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x7684;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><strong>f(k) = k%D</strong></p>
+<p>&#x5176;&#x4E2D; k &#x662F;&#x5173;&#x952E;&#x5B57;&#xFF0C;D &#x662F;&#x6563;&#x5217;&#x8868;&#x7684;&#x957F;&#x5EA6;&#xFF08;&#x6876;&#x7684;&#x6570;&#x91CF;&#xFF09;&#x3002;</p>
+<p><strong>&#x51B2;&#x7A81;&#x548C;&#x6EA2;&#x51FA;</strong></p>
+<p>&#x5F53;&#x4E0D;&#x540C;&#x5173;&#x952E;&#x5B57;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x8D77;&#x59CB;&#x6876;&#x76F8;&#x540C;&#x65F6;&#xFF0C;&#x5C31;&#x662F;<strong>&#x51B2;&#x7A81;</strong>&#x53D1;&#x751F;&#xFF1B;&#x5982;&#x679C;&#x6876;&#x6CA1;&#x6709;&#x7A7A;&#x95F4;&#x5B58;&#x50A8;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x5BF9;&#xFF0C;&#x5C31;&#x662F;<strong>&#x6EA2;&#x51FA;</strong>&#x53D1;&#x751F;&#x3002;</p>
+<h2 id="&#x7EBF;&#x578B;&#x63A2;&#x67E5;">&#x7EBF;&#x578B;&#x63A2;&#x67E5;</h2>
+<p>&#x89E3;&#x51B3;&#x6EA2;&#x51FA;&#x7684;&#x5E38;&#x7528;&#x65B9;&#x6CD5;&#x662F; <strong>&#x7EBF;&#x6027;&#x63A2;&#x67E5;</strong>&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x8981;&#x67E5;&#x627E;&#x5173;&#x952E;&#x5B57;&#x4E3A; k &#x7684;&#x6570;&#x5BF9;&#xFF0C;&#x9996;&#x5148;&#x641C;&#x7D22;&#x8D77;&#x59CB;&#x6876; f (k)&#xFF0C;&#x7136;&#x540E;&#x628A;&#x6563;&#x5217;&#x8868;&#x5F53;&#x505A; <strong>&#x73AF;&#x8868;</strong> &#x7EE7;&#x7EED;&#x641C;&#x7D22;&#x4E0B;&#x4E00;&#x4E2A;&#x6876;&#xFF0C;&#x76F4;&#x5230;&#x4EE5;&#x4E0B;&#x60C5;&#x51B5;&#x4E4B;&#x4E00;&#x53D1;&#x751F;&#x4E3A;&#x6B62;&#xFF1A;</p>
+<ol>
+<li>&#x5B58;&#x5728;&#x5173;&#x952E;&#x5B57; k &#x7684;&#x6876;&#x5DF2;&#x627E;&#x5230;&#xFF0C;&#x5373;&#x627E;&#x5230;&#x4E86;&#x8981;&#x67E5;&#x627E;&#x7684;&#x6570;&#x5BF9;</li>
+<li>&#x5230;&#x8FBE;&#x4E00;&#x4E2A;&#x7A7A;&#x6876;</li>
+<li>&#x53C8;&#x56DE;&#x5230;&#x8D77;&#x59CB;&#x6876; f(k)</li>
+</ol>
+<p><em>&#x540E;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x8BF4;&#x660E;&#x5173;&#x952E;&#x5B57;&#x4E3A; k &#x7684;&#x6570;&#x5BF9;&#x4E0D;&#x5B58;&#x5728;&#x3002;</em></p>
+<p><img src="../../&#x56FE;&#x7247;/&#x7EBF;&#x6027;&#x63A2;&#x67E5;.png" alt=""></p>
+<h2 id="&#x94FE;&#x5F0F;&#x6563;&#x5217;">&#x94FE;&#x5F0F;&#x6563;&#x5217;</h2>
+<p>&#x5982;&#x679C;&#x6563;&#x5217;&#x8868;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x6876;&#x53EF;&#x4EE5;&#x5BB9;&#x7EB3;&#x65E0;&#x9650;&#x591A;&#x4E2A;&#x8BB0;&#x5F55;&#xFF0C;&#x90A3;&#x4E48;&#x6EA2;&#x51FA;&#x95EE;&#x9898;&#x5C31;&#x4E0D;&#x5B58;&#x5728;&#x4E86;&#x3002;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x76EE;&#x6807;&#x7684;&#x4E00;&#x4E2A;&#x65B9;&#x5F0F;&#x662F;&#x7ED9;&#x6563;&#x5217;&#x8868;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x7EBF;&#x6027;&#x8868;&#x3002;</p>
+<p><img src="../../&#x56FE;&#x7247;/&#x94FE;&#x5F0F;&#x6563;&#x5217;&#x8868;.png" alt=""></p>
+<p>&#x5728;&#x6BCF;&#x4E2A;&#x94FE;&#x8868;&#x4E0A;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x5C3E;&#x8282;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x6539;&#x8FDB;&#x4E00;&#x4E9B;&#x7A0B;&#x5E8F;&#x7684;&#x6027;&#x80FD;&#x3002;&#x5C3E;&#x8282;&#x70B9;&#x7684;&#x5173;&#x952E;&#x5B57;&#x503C;&#x6700;&#x8D77;&#x7801;&#x8981;&#x6BD4;&#x63D2;&#x5165;&#x7684;&#x6240;&#x6709;&#x6570;&#x5BF9;&#x7684;&#x5173;&#x952E;&#x5B57;&#x90FD;&#x5927;&#x3002;</p>
+<p><img src="../../&#x56FE;&#x7247;/&#x5E26;&#x5C3E;&#x7ED3;&#x70B9;&#x7684;&#x94FE;&#x5F0F;&#x6563;&#x5217;&#x8868;.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="跳表.html" class="navigation navigation-prev " aria-label="Previous page: 跳表">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../二叉树和其他树/树.html" class="navigation navigation-next " aria-label="Next page: 二叉树和其他树">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"散列","level":"1.3.5.3","depth":3,"next":{"title":"二叉树和其他树","level":"1.3.6","depth":2,"path":"数据结构/二叉树和其他树/树.md","ref":"数据结构/二叉树和其他树/树.md","articles":[{"title":"树","level":"1.3.6.1","depth":3,"path":"数据结构/二叉树和其他树/树.md","ref":"数据结构/二叉树和其他树/树.md","articles":[]},{"title":"二叉树","level":"1.3.6.2","depth":3,"path":"数据结构/二叉树和其他树/二叉树.md","ref":"数据结构/二叉树和其他树/二叉树.md","articles":[]}]},"previous":{"title":"跳表","level":"1.3.5.2","depth":3,"path":"数据结构/跳表和散列/跳表.md","ref":"数据结构/跳表和散列/跳表.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","katex","livereload"],"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"数据结构/跳表和散列/散列.md","mtime":"2020-01-16T09:25:09.298Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-17T03:00:04.121Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
