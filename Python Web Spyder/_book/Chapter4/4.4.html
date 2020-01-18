@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>网络爬虫的基本议题 · GitBook</title>
+        <title>lxml · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -64,7 +64,7 @@
     <link rel="next" href="../Chapter2/2.1.html" />
     
     
-    <link rel="prev" href="1.1.html" />
+    <link rel="prev" href="4.3.html" />
     
 
     </head>
@@ -106,9 +106,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="1.1.html">
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/1.1.html">
             
-                <a href="1.1.html">
+                <a href="../Chapter1/1.1.html">
             
                     
                     网络爬虫入门
@@ -120,9 +120,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="1.1.html">
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1.1.html">
             
-                <a href="1.1.html">
+                <a href="../Chapter1/1.1.html">
             
                     
                     Robots协议
@@ -133,9 +133,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="1.2.html">
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1.2.html">
             
-                <a href="1.2.html">
+                <a href="../Chapter1/1.2.html">
             
                     
                     网络爬虫的基本议题
@@ -209,9 +209,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../Chapter4/4.1.html">
+        <li class="chapter " data-level="1.5" data-path="4.1.html">
             
-                <a href="../Chapter4/4.1.html">
+                <a href="4.1.html">
             
                     
                     解析网页
@@ -223,9 +223,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4.2.html">
+        <li class="chapter " data-level="1.5.1" data-path="4.2.html">
             
-                <a href="../Chapter4/4.2.html">
+                <a href="4.2.html">
             
                     
                     正则表达式
@@ -236,9 +236,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4.3.html">
+        <li class="chapter " data-level="1.5.2" data-path="4.3.html">
             
-                <a href="../Chapter4/4.3.html">
+                <a href="4.3.html">
             
                     
                     BeautifulSoup
@@ -249,9 +249,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4.4.html">
+        <li class="chapter active" data-level="1.5.3" data-path="4.4.html">
             
-                <a href="../Chapter4/4.4.html">
+                <a href="4.4.html">
             
                     
                     lxml
@@ -388,7 +388,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >网络爬虫的基本议题</a>
+        <a href=".." >lxml</a>
     </h1>
 </div>
 
@@ -403,14 +403,69 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7F51;&#x7EDC;&#x722C;&#x866B;&#x7684;&#x57FA;&#x672C;&#x8BAE;&#x9898;">&#x7F51;&#x7EDC;&#x722C;&#x866B;&#x7684;&#x57FA;&#x672C;&#x8BAE;&#x9898;</h1>
-<h2 id="python&#x722C;&#x866B;&#x7684;&#x6D41;&#x7A0B;">Python&#x722C;&#x866B;&#x7684;&#x6D41;&#x7A0B;</h2>
-<p>&#x7F51;&#x7EDC;&#x722C;&#x866B;&#x7684;&#x6D41;&#x7A0B;&#x4E3B;&#x8981;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E09;&#x90E8;&#x5206;&#xFF1A;</p>
-<ol>
-<li>&#x83B7;&#x53D6;&#x7F51;&#x9875;</li>
-<li>&#x89E3;&#x6790;&#x7F51;&#x9875;&#xFF08;&#x63D0;&#x53D6;&#x6570;&#x636E;&#xFF09;</li>
-<li>&#x5B58;&#x50A8;&#x6570;&#x636E;</li>
-</ol>
+                                <h1 id="lxml">lxml</h1>
+<p>lxml&#x4F7F;&#x7528;C&#x8BED;&#x8A00;&#x7F16;&#x5199;&#xFF0C;&#x89E3;&#x6790;&#x901F;&#x5EA6;&#x6BD4;&#x4E0D;&#x4F7F;&#x7528;lxml&#x89E3;&#x6790;&#x5668;&#x7684;BeautifulSoup&#x5FEB;&#x4E00;&#x4E9B;&#x3002;</p>
+<p>&#x4F7F;&#x7528;lxml&#x63D0;&#x53D6;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801;&#x6570;&#x636E;&#x4E5F;&#x6709;3&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5373;<strong>XPath&#x9009;&#x62E9;&#x5668;</strong>&#x3001;<strong>CSS&#x9009;&#x62E9;&#x5668;</strong>&#x548C;<strong>BeautifulSoup</strong>&#x7684;find()&#x65B9;&#x6CD5;&#x3002;</p>
+<p>XPath&#x662F;&#x4E00;&#x95E8;&#x5728;XML&#x6587;&#x6863;&#x4E2D;&#x67E5;&#x627E;&#x4FE1;&#x606F;&#x7684;&#x8BED;&#x8A00;&#x3002;XPath&#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#x6765;&#x9009;&#x53D6;XML&#x6587;&#x6863;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6216;&#x8282;&#x70B9;&#x96C6;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x5728;HTML&#x83B7;&#x53D6;&#x6570;&#x636E;&#x4E2D;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code>import requests
+from lxml import etree
+
+link = &quot;https://www.bilibili.com/video/av83704889?spm_id_from=333.851.b_62696c695f7265706f72745f64616e6365.34&quot;
+headers = {&apos;User-Agent&apos; : &apos;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36&apos;} 
+r = requests.get(link, headers= headers)
+
+soup = BeautifulSoup(r.text,&quot;html.parser&quot;)
+soup.body.contents
+
+html = etree.HTML(r.text)
+title_list = html.xpath(&apos;//h1/span/text()&apos;)
+print(title_list)
+
+&#x7ED3;&#x679C;&#xFF1A;
+[&apos;&#x3010;&#x6B23;&#x5C0F;&#x840C;&#x3011;&#x4EBA;&#x9C7C;&#x59EC;&#x9AD8;&#x8DDF;&#x5A5A;&#x7EB1;&#x72EC;&#x821E; &#x2764;&#xFE0F; stay alive&apos;]
+</code></pre><h2 id="chrome&#x83B7;&#x53D6;&#x5143;&#x7D20;xpath">Chrome&#x83B7;&#x53D6;&#x5143;&#x7D20;XPath</h2>
+<p><strong>(1) &#x5728;Chrome&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x6253;&#x5F00;&#x68C0;&#x67E5;&#x529F;&#x80FD;</strong></p>
+<p><img src="../&#x56FE;&#x7247;/&#x6B23;&#x5C0F;&#x840C;.jpg" alt=""> </p>
+<p><strong>(2) &#x627E;&#x5230;&#x5143;&#x7D20;&#xFF0C;&#x53F3;&#x51FB; -&gt; Copy -&gt; Copy XPath -&gt; &#x7C98;&#x8D34;</strong></p>
+<p><img src="../&#x56FE;&#x7247;/XPath.jpg" alt=""> </p>
+<pre><code>//*[@id=&quot;viewbox_report&quot;]/h1
+</code></pre><h2 id="xpath&#x7684;&#x9009;&#x53D6;&#x65B9;&#x6CD5;">XPath&#x7684;&#x9009;&#x53D6;&#x65B9;&#x6CD5;</h2>
+<p>XPath&#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#x8868;&#x8FBE;&#x5F0F;&#x53EF;&#x4EE5;&#x5728;&#x7F51;&#x9875;&#x6E90;&#x4EE3;&#x7801;&#x4E2D;&#x9009;&#x53D6;&#x8282;&#x70B9;&#xFF0C;&#x5B83;&#x662F;&#x6CBF;&#x7740;&#x8DEF;&#x5F84;&#x6765;&#x9009;&#x53D6;&#x7684;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x8868;&#x8FBE;&#x5F0F;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nodename</td>
+<td>&#x9009;&#x53D6;&#x6B64;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;</td>
+</tr>
+<tr>
+<td>/</td>
+<td>&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x9009;&#x53D6;</td>
+</tr>
+<tr>
+<td>//</td>
+<td>&#x4ECE;&#x5339;&#x914D;&#x9009;&#x62E9;&#x7684;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x9009;&#x62E9;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x800C;&#x4E0D;&#x8003;&#x8651;&#x5B83;&#x4EEC;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</td>
+</tr>
+<tr>
+<td>.</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;</td>
+</tr>
+<tr>
+<td>..</td>
+<td>&#x9009;&#x53D6;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x7236;&#x8282;&#x70B9;</td>
+</tr>
+<tr>
+<td>@</td>
+<td>&#x9009;&#x53D6;&#x5C5E;&#x6027;</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -438,12 +493,12 @@
 
             
                 
-                <a href="1.1.html" class="navigation navigation-prev " aria-label="Previous page: Robots协议">
+                <a href="4.3.html" class="navigation navigation-prev " aria-label="Previous page: BeautifulSoup">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Chapter2/2.1.html" class="navigation navigation-next " aria-label="Next page: 静态网页抓取">
+                <a href="../Chapter2/2.1.html" class="navigation navigation-next " aria-label="Next page: 数据存储">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -454,7 +509,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"网络爬虫的基本议题","level":"1.2.2","depth":2,"next":{"title":"静态网页抓取","level":"1.3","depth":1,"path":"Chapter2/2.1.md","ref":"Chapter2/2.1.md","articles":[]},"previous":{"title":"Robots协议","level":"1.2.1","depth":2,"path":"Chapter1/1.1.md","ref":"Chapter1/1.1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","livereload"],"pluginsConfig":{"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter1/1.2.md","mtime":"2020-01-17T06:52:42.141Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-18T11:14:39.760Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"lxml","level":"1.5.3","depth":2,"next":{"title":"数据存储","level":"1.6","depth":1,"path":"Chapter2/2.1.md","ref":"Chapter2/2.1.md","articles":[]},"previous":{"title":"BeautifulSoup","level":"1.5.2","depth":2,"path":"Chapter4/4.3.md","ref":"Chapter4/4.3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","livereload"],"pluginsConfig":{"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter4/4.4.md","mtime":"2020-01-18T09:35:19.950Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-18T11:14:39.760Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

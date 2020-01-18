@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>网络爬虫的基本议题 · GitBook</title>
+        <title>解析网页 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Chapter2/2.1.html" />
+    <link rel="next" href="4.2.html" />
     
     
-    <link rel="prev" href="1.1.html" />
+    <link rel="prev" href="../Chapter3/3.3.html" />
     
 
     </head>
@@ -106,9 +106,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="1.1.html">
+        <li class="chapter " data-level="1.2" data-path="../Chapter1/1.1.html">
             
-                <a href="1.1.html">
+                <a href="../Chapter1/1.1.html">
             
                     
                     网络爬虫入门
@@ -120,9 +120,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="1.1.html">
+        <li class="chapter " data-level="1.2.1" data-path="../Chapter1/1.1.html">
             
-                <a href="1.1.html">
+                <a href="../Chapter1/1.1.html">
             
                     
                     Robots协议
@@ -133,9 +133,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="1.2.html">
+        <li class="chapter " data-level="1.2.2" data-path="../Chapter1/1.2.html">
             
-                <a href="1.2.html">
+                <a href="../Chapter1/1.2.html">
             
                     
                     网络爬虫的基本议题
@@ -209,9 +209,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../Chapter4/4.1.html">
+        <li class="chapter active" data-level="1.5" data-path="4.1.html">
             
-                <a href="../Chapter4/4.1.html">
+                <a href="4.1.html">
             
                     
                     解析网页
@@ -223,9 +223,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../Chapter4/4.2.html">
+        <li class="chapter " data-level="1.5.1" data-path="4.2.html">
             
-                <a href="../Chapter4/4.2.html">
+                <a href="4.2.html">
             
                     
                     正则表达式
@@ -236,9 +236,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../Chapter4/4.3.html">
+        <li class="chapter " data-level="1.5.2" data-path="4.3.html">
             
-                <a href="../Chapter4/4.3.html">
+                <a href="4.3.html">
             
                     
                     BeautifulSoup
@@ -249,9 +249,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../Chapter4/4.4.html">
+        <li class="chapter " data-level="1.5.3" data-path="4.4.html">
             
-                <a href="../Chapter4/4.4.html">
+                <a href="4.4.html">
             
                     
                     lxml
@@ -388,7 +388,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >网络爬虫的基本议题</a>
+        <a href=".." >解析网页</a>
     </h1>
 </div>
 
@@ -403,14 +403,43 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7F51;&#x7EDC;&#x722C;&#x866B;&#x7684;&#x57FA;&#x672C;&#x8BAE;&#x9898;">&#x7F51;&#x7EDC;&#x722C;&#x866B;&#x7684;&#x57FA;&#x672C;&#x8BAE;&#x9898;</h1>
-<h2 id="python&#x722C;&#x866B;&#x7684;&#x6D41;&#x7A0B;">Python&#x722C;&#x866B;&#x7684;&#x6D41;&#x7A0B;</h2>
-<p>&#x7F51;&#x7EDC;&#x722C;&#x866B;&#x7684;&#x6D41;&#x7A0B;&#x4E3B;&#x8981;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E09;&#x90E8;&#x5206;&#xFF1A;</p>
+                                <h1 id="&#x89E3;&#x6790;&#x7F51;&#x9875;">&#x89E3;&#x6790;&#x7F51;&#x9875;</h1>
+<p>&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;3&#x79CD;&#x65B9;&#x6CD5;&#x63D0;&#x53D6;&#x7F51;&#x9875;&#x4E2D;&#x7684;&#x6570;&#x636E;&#xFF1A;</p>
 <ol>
-<li>&#x83B7;&#x53D6;&#x7F51;&#x9875;</li>
-<li>&#x89E3;&#x6790;&#x7F51;&#x9875;&#xFF08;&#x63D0;&#x53D6;&#x6570;&#x636E;&#xFF09;</li>
-<li>&#x5B58;&#x50A8;&#x6570;&#x636E;</li>
+<li>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</li>
+<li>BeautifulSoup</li>
+<li>lxml</li>
 </ol>
+<table>
+<thead>
+<tr>
+<th>HTML&#x89E3;&#x6790;&#x5668;</th>
+<th>&#x6027;&#x80FD;</th>
+<th>&#x6613;&#x7528;&#x6027;</th>
+<th>&#x63D0;&#x53D6;&#x6570;&#x636E;&#x65B9;&#x5F0F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</td>
+<td>&#x5FEB;</td>
+<td>&#x8F83;&#x96BE;</td>
+<td>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</td>
+</tr>
+<tr>
+<td>BeautifulSoup</td>
+<td>&#x5FEB;&#xFF08;&#x4F7F;&#x7528;lxml&#x89E3;&#x6790;&#xFF09;</td>
+<td>&#x7B80;&#x5355;</td>
+<td>Find&#x65B9;&#x6CD5;&lt;/br&gt;CSS&#x9009;&#x62E9;&#x5668;</td>
+</tr>
+<tr>
+<td>lxml</td>
+<td>&#x5FEB;</td>
+<td>&#x7B80;&#x5355;</td>
+<td>XPath&lt;/br&gt;CSS&#x9009;&#x62E9;&#x5668;</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -438,12 +467,12 @@
 
             
                 
-                <a href="1.1.html" class="navigation navigation-prev " aria-label="Previous page: Robots协议">
+                <a href="../Chapter3/3.3.html" class="navigation navigation-prev " aria-label="Previous page: 通过Selenium模拟浏览器抓取">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../Chapter2/2.1.html" class="navigation navigation-next " aria-label="Next page: 静态网页抓取">
+                <a href="4.2.html" class="navigation navigation-next " aria-label="Next page: 正则表达式">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -454,7 +483,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"网络爬虫的基本议题","level":"1.2.2","depth":2,"next":{"title":"静态网页抓取","level":"1.3","depth":1,"path":"Chapter2/2.1.md","ref":"Chapter2/2.1.md","articles":[]},"previous":{"title":"Robots协议","level":"1.2.1","depth":2,"path":"Chapter1/1.1.md","ref":"Chapter1/1.1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","livereload"],"pluginsConfig":{"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter1/1.2.md","mtime":"2020-01-17T06:52:42.141Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-18T11:14:39.760Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"解析网页","level":"1.5","depth":1,"next":{"title":"正则表达式","level":"1.5.1","depth":2,"path":"Chapter4/4.2.md","ref":"Chapter4/4.2.md","articles":[]},"previous":{"title":"通过Selenium模拟浏览器抓取","level":"1.4.2","depth":2,"path":"Chapter3/3.3.md","ref":"Chapter3/3.3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","livereload"],"pluginsConfig":{"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter4/4.1.md","mtime":"2020-01-17T13:15:37.598Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-18T11:14:39.760Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
