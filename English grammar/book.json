@@ -1,0 +1,16 @@
+{
+    "plugins": [
+        "toggle-chapters",
+        "edit-link-plus",
+        "splitter",
+        "image-captions",
+        "code",
+        "emphasize"
+    ],
+    "pluginsConfig": {
+        "edit-link-plus": {
+            "base": "",
+            "label": "编辑本页"
+        }
+    }
+}
